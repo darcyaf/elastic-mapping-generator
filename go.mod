@@ -1,4 +1,4 @@
-module elastic-mapping-generator
+module github.com/darcyaf/elastic-mapping-generator
 
 go 1.14
 
