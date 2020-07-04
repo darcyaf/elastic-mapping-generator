@@ -1,0 +1,26 @@
+{
+    "mappings": {
+        "properties": {
+            "Created": {
+                "type": "date"
+            },
+            "name": {
+                "type": "text"
+            },
+            "pass": {
+                "analyzer": "ik_smart",
+                "type": "text"
+            },
+            "pass2": {
+                "type": "text"
+            },
+            "posts": {
+                "properties": {
+                    "Id": {
+                        "type": "long"
+                    }
+                }
+            }
+        }
+    }
+}
