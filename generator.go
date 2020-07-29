@@ -158,7 +158,8 @@ func (g *Generator) exploderBaseDir(fileName string) {
 			break
 		}
 	}
-	for k, path := range g.imports {
+	imports := g.imports
+	for k, path := range imports {
 		if isDirectory( prefix + path){
 			var kk string = k
 			if k=="_"{
@@ -166,8 +167,6 @@ func (g *Generator) exploderBaseDir(fileName string) {
 				kk = kks[len(kks)-1]
 			}
 			g.imports[kk] = prefix + path
-		}else{
-			delete(g.imports, k)
 		}
 	}
 }
