@@ -160,7 +160,12 @@ func (g *Generator) exploderBaseDir(fileName string) {
 	}
 	for k, path := range g.imports {
 		if isDirectory( prefix + path){
-			g.imports[k] = prefix + path
+			var kk string = k
+			if k=="_"{
+				kks:= strings.Split(path,"/")
+				kk = kks[len(kks)-1]
+			}
+			g.imports[kk] = prefix + path
 		}else{
 			delete(g.imports, k)
 		}
